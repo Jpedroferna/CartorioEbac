@@ -97,7 +97,7 @@ int consulta()
 			
 			if(opcao==1)
 			{
-				
+				fclose(file);
 				registro();
 				main();
 				break;
@@ -110,20 +110,22 @@ int consulta()
 				consulta();
 				break;
 				
-				case 2:		
+				case 2:
 				printf("Voltando ao menu!\n");
 				system("pause");
+				return 0;
 				main();
 				break;
 				}
 			}
 			if(opcao>=3 || opcao<=0)
 			{
+				fclose(file);
 				printf("Essa opção não está disponível!\n");
 				system("pause");
 				main();
 				break;
-			}
+			}	
 			//fim das opções
 		}
 	}
