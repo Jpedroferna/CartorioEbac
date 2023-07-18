@@ -99,32 +99,21 @@ int consulta()
 			{
 				fclose(file);
 				registro();
-				main();
-				break;
+				return 0;
 			}
 			if(opcao==2)
 			{
-				switch(opcao)
-				{
-				case 1:
-				consulta();
-				break;
-				
-				case 2:
+				fclose(file);
 				printf("Voltando ao menu!\n");
 				system("pause");
 				return 0;
-				main();
-				break;
-				}
 			}
 			if(opcao>=3 || opcao<=0)
 			{
 				fclose(file);
 				printf("Essa opção não está disponível!\n");
 				system("pause");
-				main();
-				break;
+				return 0;
 			}	
 			//fim das opções
 		}
@@ -171,7 +160,7 @@ int deletar()
 			if(opcao==1)
 			{
 				fclose(file);
-				printf("Usuário deletado com sucesso!\n");
+				printf("Usuário deletado com sucesso!\n\n");
 				system("pause");
 				remove(cpf);
 				break;
@@ -179,17 +168,16 @@ int deletar()
 			if(opcao==2)
 			{
 				fclose(file);
-				printf("Voltando ao menu!\n");
+				printf("Voltando ao menu!\n\n");
 				system("pause");
-				main();
 				break;
 			}
+			
 			if(opcao>=3 || opcao<=0)
 			{
 				fclose(file);
 				printf("Essa opção não está disponível!\n");
 				system("pause");
-				main();
 				break;
 			}
 		}
