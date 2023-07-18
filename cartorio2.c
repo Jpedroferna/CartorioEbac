@@ -163,14 +163,14 @@ int deletar()
 				printf("Usuário deletado com sucesso!\n\n");
 				system("pause");
 				remove(cpf);
-				break;
+				return 0;
 			}
 			if(opcao==2)
 			{
 				fclose(file);
 				printf("Voltando ao menu!\n\n");
 				system("pause");
-				break;
+				return 0;
 			}
 			
 			if(opcao>=3 || opcao<=0)
@@ -178,7 +178,7 @@ int deletar()
 				fclose(file);
 				printf("Essa opção não está disponível!\n");
 				system("pause");
-				break;
+				return 0;
 			}
 		}
 	}
